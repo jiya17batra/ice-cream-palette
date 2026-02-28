@@ -1,0 +1,159 @@
+/* ===== GLOBAL RESET ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #FDF6EC, #EFE3D3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+  width: 100%;
+  max-width: 340px;
+  position: relative;
+}
+
+/* ===== PRINTER TOP ===== */
+.printer-top {
+  z-index: 10;
+  position: relative;
+  border: 6px solid #666666;
+  height: 10px;
+  border-bottom: 0;
+  border-radius: 8px 8px 0 0;
+  background: #333333;
+}
+
+/* ===== PAPER AREA ===== */
+.paper-container {
+  position: relative;
+  overflow: hidden;
+  height: 65vh;
+  max-height: 520px;
+}
+
+.receipt-img {
+  width: 100%;
+  display: block;
+  filter: drop-shadow(0px 2px 5px rgba(0,0,0,0.1));
+}
+
+.paper {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  animation: print 10s linear infinite alternate;
+}
+
+@keyframes print {
+  0%, 5% { transform: translateY(-95%); }
+  95%, 100% { transform: translateY(0%); }
+}
+
+.printer-top::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.2), transparent);
+  z-index: 5;
+}
+
+/* ===== FLOATING HIRE ME BUTTON ===== */
+
+.learn-more {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: inline-block;
+  cursor: pointer;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  font-family: 'Mukta', sans-serif;
+  font-size: 1rem;
+  width: 12rem;
+  z-index: 1000;
+}
+
+.learn-more .circle {
+  position: relative;
+  display: block;
+  width: 3rem;
+  height: 3rem;
+  background: #282936;
+  border-radius: 1.625rem;
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+}
+
+.learn-more .circle .icon.arrow {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0.625rem;
+  margin: auto;
+  width: 1.125rem;
+  height: 0.125rem;
+}
+
+.learn-more .circle .icon.arrow::before {
+  content: "";
+  position: absolute;
+  top: -0.25rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  transform: rotate(45deg);
+}
+
+.learn-more .button-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin-left: 1.85rem;
+  padding: 0.75rem 0;
+  color: #282936;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+}
+
+.learn-more:hover .circle {
+  width: 100%;
+}
+
+.learn-more:hover .circle .icon.arrow {
+  background: #fff;
+  transform: translateX(1rem);
+}
+
+.learn-more:hover .button-text {
+  color: #fff;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (min-width: 600px) {
+  .container { max-width: 380px; }
+  .paper-container { height: 70vh; }
+}
+
+@media (min-width: 1024px) {
+  .container { max-width: 420px; }
+  .paper-container { height: 75vh; }
+}
