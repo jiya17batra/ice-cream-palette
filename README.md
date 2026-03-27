@@ -1,20 +1,4 @@
 # 🍨 Ice Cream Palette
-
-A playful design experiment inspired by a simple moment —  
-painting, taking an ice cream break, and realizing my color palette looked like ice cream flavors.
-
-Chocolate. Vanilla. Strawberry.  
-Design meets dessert.
-
----
-
-## 🌐 View
-
-🔗 **View the Project Here:**  
-https://jiya17batra.github.io/ice-cream-palette/
-
----
-
 ## 🍦 The Idea Behind It
 
 This project was born during a painting session.
@@ -29,6 +13,14 @@ my paint palette had the same tones as my ice cream:
 That small, everyday creative coincidence turned into this interactive web project.
 
 It’s a reminder that inspiration hides in ordinary moments.
+
+
+---
+
+## 🌐 View
+
+🔗 **View the Project Here:**  
+https://jiya17batra.github.io/ice-cream-palette/
 
 ---
 
